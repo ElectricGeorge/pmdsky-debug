@@ -30,7 +30,7 @@ overlay29:
         
         r0: Weather ID
         return: color table pointer
-    - name: DungeonAlloc
+    - name: Dg_CreateDungeonBuffer
       address:
         EU: 0x22DF39C
         NA: 0x22DEA5C
@@ -1099,10 +1099,10 @@ overlay29:
       description: |-
         Sets the dungeon PRNG to use the primary LCG for subsequent random number generation, and also resets the secondary LCG index back to 0.
         
-        Similar to DungeonRngSetPrimary, but DungeonRngSetPrimary doesn't modify the secondary LCG index if it was already set to something other than 0.
+        Similar to DgRandom_EndSystemRandomMode, but DgRandom_EndSystemRandomMode doesn't modify the secondary LCG index if it was already set to something other than 0.
         
         No params.
-    - name: DungeonRngSetSecondary
+    - name: DgRandom_StartSystemRandomMode
       address:
         EU: 0x22EB5FC
         NA: 0x22EAC4C
@@ -1111,7 +1111,7 @@ overlay29:
         Sets the dungeon PRNG to use one of the 5 secondary LCGs for subsequent random number generation.
         
         r0: secondary LCG index
-    - name: DungeonRngSetPrimary
+    - name: DgRandom_EndSystemRandomMode
       address:
         EU: 0x22EB614
         NA: 0x22EAC64

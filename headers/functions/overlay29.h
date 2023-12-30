@@ -4,7 +4,7 @@
 #include "overlay29/move_effects.h"
 
 struct rgba* GetWeatherColorTable(enum weather_id);
-struct dungeon* DungeonAlloc(void);
+struct dungeon* Dg_CreateDungeonBuffer(void);
 struct dungeon* GetDungeonPtrMaster(void);
 void DungeonZInit(void);
 void DungeonFree(void);
@@ -98,8 +98,8 @@ int DungeonRandRange(int x, int y);
 bool DungeonRandOutcome(int percentage);
 int CalcStatusDuration(struct entity* entity, int16_t* turn_range, bool iq_skill_effects);
 void DungeonRngUnsetSecondary(void);
-void DungeonRngSetSecondary(int i);
-void DungeonRngSetPrimary(void);
+void DgRandom_StartSystemRandomMode(int i);
+void DgRandom_EndSystemRandomMode(void);
 enum music_id MusicTableIdxToMusicId(int music_table_idx);
 void ChangeDungeonMusic(enum music_id music_id);
 void TrySwitchPlace(struct entity* user, struct entity* target);

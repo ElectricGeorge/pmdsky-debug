@@ -1723,7 +1723,7 @@ struct dungeon {
     undefined field_0x2cb13;
 };
 #if PMDSKY_VERSION == PMDSKY_JP
-// TODO: From DungeonAlloc, this should actually be 182896,
+// TODO: From Dg_CreateDungeonBuffer, this should actually be 182896,
 // but it's not known which other fields are missing
 ASSERT_SIZE(struct dungeon, 182980);
 #else
