@@ -1092,7 +1092,7 @@ arm9:
         NA: 0x200C11C
         JP: 0x200C11C
       description: "Does nothing, only called in the debug initialization function."
-    - name: AppendProgPos
+    - name: Debug_AppendProgPos
       address:
         EU: 0x200C1A8
         NA: 0x200C120
@@ -1126,7 +1126,7 @@ arm9:
         
         r0: message
         r1: program position info (can be null)
-    - name: DebugDisplay
+    - name: Debug_PrintDisplay
       address:
         EU:
           - 0x200C250
@@ -9065,7 +9065,7 @@ arm9:
         
         r0: monster ID
         return: second form
-    - name: FemaleToMaleForm
+    - name: Monster_FemaleToMaleForm
       address:
         EU: 0x2054F5C
         NA: 0x2054BE0
